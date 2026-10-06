@@ -19,6 +19,9 @@ path ='/content/Palo Alto Networks.csv'
 data=pd.read_csv("Palo Alto Networks.csv")
 data.head(5)
 
+X = data.drop("Attrition", axis=1)
+y = data["Attrition"]
+
 data.info()
 
 data.describe()
